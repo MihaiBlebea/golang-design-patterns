@@ -8,10 +8,10 @@ import (
 
 func TestGetSameInstance(t *testing.T) {
 	s1 := singleton.GetInstance()
-	s1.Increment()
+	s1.Increment() // value = 1
 
 	s2 := singleton.GetInstance()
-	s2.Increment()
+	s2.Increment() // value = 2
 
 	if s1.Value() != 2 {
 		t.Errorf("Expected %d got %d", 2, s1.Value())
